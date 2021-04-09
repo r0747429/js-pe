@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>PE-Opdracht: An Vinck</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      .errorlist {
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!--https://getbootstrap.com/docs/5.0/components/navbar/-->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Anaroc Services</a>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Registreer</h1>
+      <p class="lead">
+        Meld je aan bij Anoroc Services, wij beschermen jouw software teen
+        malware!
+      </p>
+      <div class="row">
+        <div class="col-md-8">
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="voornaam" class="form-label">Voornaam</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="voornaam"
+                    placeholder="Uw voornaam"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="naam" class="form-label">Naam</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="naam"
+                    placeholder="Uw naam"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <!--Gebruikersnaam-->
+                <div class="mb-3">
+                  <label for="gebruikersnaam">Gebruikersnaam</label>
+                  <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="gebruikersnaam"
+                      placeholder="Uw gebruikersnaam"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <!--Emailadres-->
+                <label for="email">Emailaddres</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailadres"
+                  placeholder="Mail@example.com"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <!--Wachtwoord-->
+                <div class="mb-3">
+                  <label for="wachtwoord" class="col-form-label"
+                    >Wachtwoord</label
+                  >
+                  <input
+                    type="password"
+                    id="wachtwoord"
+                    class="form-control"
+                    aria-describedby="passwordHelpInline"
+                  />
+                  <span id="passwordHelpInline" class="form-text">
+                    Je wachtwoord moet minstens 8 tekens lang zijn.
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <!--Herhaal wachtwoord-->
+                <div class="mb-3">
+                  <label for="herhaal-wachtwoord" class="col-form-label"
+                    >Herhaal wachtwoord</label
+                  >
+                  <input
+                    type="password"
+                    id="herhaal-wachtwoord"
+                    class="form-control"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--Adres-->
+            <div class="mb-3">
+              <label for="adres">Adres</label>
+              <input
+                type="text"
+                class="form-control"
+                id="adres"
+                placeholder="Uw adres en huisnummer"
+              />
+            </div>
+            <div class="row">
+              <!--Land-->
+              <div class="col-md-5">
+                <label for="inputCity">Land</label>
+                <select id="land" class="form-control">
+                  <option selected>Kies een Land</option>
+                  <option>België</option>
+                  <option>Duitsland</option>
+                  <option>Frankrijk</option>
+                  <option>Nederland</option>
+                </select>
+              </div>
+
+              <!--Provincie-->
+              <div class="form-group col-md-5">
+                <label for="provincie">Provincie</label>
+                <select id="provincie" class="form-control">
+                  <option selected>Kies een provincie</option>
+                  <option>Antwerpen</option>
+                  <option>Henegouwen</option>
+                  <option>Limburg</option>
+                  <option>Luik</option>
+                  <option>Luxemburg</option>
+                  <option>Namen</option>
+                  <option>Oost-Vlaanderen</option>
+                  <option>West-Vlaanderen</option>
+                </select>
+              </div>
+
+              <!--Postcode-->
+              <div class="col-md-2">
+                <label for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode" />
+              </div>
+            </div>
+
+            <!--Hou me op de hoogte-->
+            <hr />
+            <div class="row">
+              <div class="col-md-8">
+                <h3>Hou me op de hoogte</h3>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="houMeOpDeHoogte"
+                  />
+                  <label class="form-check-label" for="houMeOpDeHoogte"
+                    >Inschrijven voor onze nieuwsbrief</label
+                  >
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="algemeneVoorwaarden"
+                  />
+                  <label class="form-check-label" for="algemeneVoorwaarden"
+                    >Ik ga akkoord met de algemene voorwaarden.</label
+                  >
+                </div>
+              </div>
+
+              <!--Betaling-->
+              <div class="col-md-4">
+                <h3>Betaling</h3>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="betaling"
+                    id="bankingApp"
+                    value="Banking app"
+                    checked
+                  />
+                  <label class="form-check-label" for="bankingApp">
+                    Banking app
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="betaling"
+                    id="overschrijving"
+                    value="Overschrijving"
+                  />
+                  <label class="form-check-label" for="overschrijving">
+                    Overschrijving
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="betaling"
+                    id="visaCard"
+                    value="Visa card"
+                  />
+                  <label class="form-check-label" for="visaCard">
+                    Visa card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="betaling"
+                    id="payPal"
+                    value="Paypal"
+                  />
+                  <label class="form-check-label" for="payPal"> PayPal </label>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <!--Button //onclick-->
+              <div class="col-md-12">
+                <button
+                  type="button"
+                  class="btn btn-primary w-100"
+                  onclick="validateForm()"
+                >
+                  Wave your magic wand
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-4">
+          <div id="success-alert" class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Goed gedaan!</h4>
+            <p id="success">Aww yeah, je werd geregistreerd.</p>
+          </div>
+
+          <div id="payment-alert" class="alert alert-primary" role="alert">
+            <h4>Betalingswijze</h4>
+            <p id="payment">Je betalingswijze is ..</p>
+          </div>
+
+          <div id="error-alert" class="alert alert-danger" role="alert">
+            <h4>Yikes, errors..</h4>
+            <p id="errors" class="errorlist"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      //B. Array aanmaken om errors in op te vangen
+      let errors = [];
+
+      //C. Hide alerts
+      document.querySelector("#success-alert").style.display = "none";
+      document.querySelector("#payment-alert").style.display = "none";
+      document.querySelector("#error-alert").style.display = "none";
+
+      //A. ValidateForm
+      function validateForm() {
+        document.querySelector("#success-alert").style.display = "none";
+        document.querySelector("#payment-alert").style.display = "none";
+        document.querySelector("#error-alert").style.display = "none";
+        errors = [];
+        //1. Functie oproepen om lege velden te controleren
+        checkEmtyField();
+        //2. Functie oproepen om emailadres te controleren
+        let emailadres = document.querySelector("#emailadres").value;
+        validateEmail(emailadres);
+        //3. Functie oproepen om wachtwoord te controleren
+        validateWachtwoorden();
+        //4. Functie oproepen of betalingswijze is aangeduid
+        let payment = document.querySelector('input[name="betaling"]:checked')
+          .value;
+        validatePayment(payment);
+        //5. Functie oproepen voor controle postcode
+        let postcode = document.querySelector("#postcode").value;
+        checkPC(postcode);
+        //6. Functie oproepen voor aanduiden algemene voorwaarden
+        activateAlgemeneVoorwaarden();
+        if (errors.length > 0) {
+          document.querySelector("#error-alert").style.display = "block";
+          let errorlist = document.querySelector("#errors");
+          //loop over array https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+          errorlist.innerHTML = "";
+
+          for (let i = 0; i < errors.length; i++) {
+            console.log(errors[i]);
+            errorlist.append(errors[i]);
+            errorlist.append("\n");
+          }
+        } else {
+          document.querySelector("#payment-alert").style.display = "block";
+          document.querySelector("#success-alert").style.display = "block";
+          document.querySelector("#error-alert").style.display = "hide";
+        }
+      }
+
+      function checkEmtyField(veld, melding) {
+        let voornaam = document.querySelector("#voornaam").value;
+        if (voornaam == "") {
+          errors.push("Het veld voornaam is vereist.");
+        }
+        let naam = document.querySelector("#naam").value;
+        if (naam == "") {
+          errors.push("Het veld naam is vereist.");
+        }
+        let gebruikersnaam = document.querySelector("#gebruikersnaam").value;
+        if (gebruikersnaam == "") {
+          errors.push("Het veld gebruikersnaam is vereist.");
+        }
+        let adres = document.querySelector("#adres").value;
+        if (adres == "") {
+          errors.push("Adres is vereist.");
+        }
+
+        let land = document.querySelector("#land").value;
+        if (land == "Kies een Land") {
+          errors.push("Het veld land is vereist.");
+        }
+        let provincie = document.querySelector("#provincie").value;
+        if (provincie == "Kies een provincie") {
+          errors.push("Het veld provincie is vereist.");
+        }
+      }
+
+      function validateEmail(emailadres) {
+        //https://stackoverflow.com/questions/59682603/email-regex-validation-for-name-and-surname
+        if (emailadres == "") {
+          errors.push("Het veld emailadres is vereist.");
+        } else {
+          if (
+            !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+              emailadres
+            )
+          ) {
+            errors.push("Het emailadres is incorrect.");
+          }
+        }
+      }
+
+      function validateWachtwoorden() {
+        let wachtwoord = document.querySelector("#wachtwoord").value;
+        let herhaalwachtwoord = document.querySelector("#herhaal-wachtwoord")
+          .value;
+        if (wachtwoord == "") {
+          errors.push("Het wachtwoord is vereist.");
+        }
+        if (herhaalwachtwoord == "") {
+          errors.push("Het herhaal wachtwoord is vereist.");
+        }
+        if (wachtwoord != "" && wachtwoord.length < 7) {
+          errors.push("Het wachtwoord moet minstens 7 karakters lang zijn.");
+        }
+        if (wachtwoord != "" && wachtwoord != herhaalwachtwoord) {
+          errors.push("Je wachtwoorden komen niet overeen.");
+        }
+      }
+
+      function validatePayment(veld) {
+        let betaling = document.querySelector("#payment");
+        betaling.innerHTML = "Je betalingswijze is " + veld;
+      }
+
+      function checkPC(postcode) {
+        if (postcode == "") {
+          errors.push("Het veld postcode is vereist.");
+        } else {
+          if (parseInt(postcode) < 1000 || parseInt(postcode) > 9999) {
+            errors.push(
+              "De waarde van de postcode moet tussen 1000 en 9999 liggen."
+            );
+          }
+        }
+      }
+
+      function activateAlgemeneVoorwaarden() {
+        let checkBox = document.querySelector("#algemeneVoorwaarden");
+
+        // If the checkbox is checked, display the output text
+        console.log("checkbox");
+        console.log(checkBox.checked);
+        if (checkBox.checked == false) {
+          errors.push("Je moet de algemene voorwaarde accepteren.");
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
